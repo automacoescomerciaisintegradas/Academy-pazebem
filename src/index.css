@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 6% 10%; /* Slightly lighter dark background */
+    --foreground: 0 0% 98%;
+    --card: 240 5% 14%; /* Lighter card background for better contrast */
+    --card-foreground: 0 0% 98%;
+    --popover: 240 6% 10%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 120 60% 50%; /* neon-green */
+    --primary-foreground: 240 10% 3.9%;
+    --secondary: 240 5% 18%; /* Lighter secondary elements */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 5% 18%;
+    --muted-foreground: 240 5% 75%; /* Increased muted text contrast */
+    --accent: 240 5% 18%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 20%; /* More visible borders */
+    --input: 240 4% 20%;
+    --ring: 120 60% 50%; /* neon-green */
+  }
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    text-rendering: optimizeLegibility;
+  }
+}
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50;
+  }
+  .text-gradient-green {
+    @apply bg-gradient-to-r from-neon-green to-emerald-400;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+@layer components {
+  .carousel {
+    @apply w-full overflow-hidden relative;
+    mask-image: linear-gradient(to right, transparent, white 20%, white 80%, transparent);
+  }
+  .carousel__track {
+    @apply flex w-max animate-scroll;
+  }
+  .carousel:hover .carousel__track {
+    animation-play-state: paused;
+  }
+  .carousel__item {
+    @apply flex-shrink-0 px-4;
+  }
+}
