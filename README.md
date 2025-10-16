@@ -2,7 +2,7 @@
 
 A futuristic and feature-rich online course platform with a stunning landing page, user dashboard, and a comprehensive admin management system. Built on Cloudflare Workers and Durable Objects for a scalable, serverless architecture.
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/automacoescomerciaisintegradas/Academy-pazebem)
 
 ## ✨ Key Features
 
@@ -88,4 +88,4 @@ This command will build the application and deploy the worker and static assets 
 
 Alternatively, deploy directly from your GitHub repository with a single click:
 
-[cloudflarebutton]
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/automacoescomerciaisintegradas/Academy-pazebem)
